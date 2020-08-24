@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "QuotesHub"
+    }
+  },
+  "defaultProject": "QuotesHub",
+  "cli": {
+    "analytics": "fc659590-5f5e-49dc-bbfb-2f03a237616e"
+  }
 }
