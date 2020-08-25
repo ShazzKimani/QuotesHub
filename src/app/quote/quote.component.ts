@@ -9,10 +9,10 @@ import { Quote } from "../quote";
 export class QuoteComponent implements OnInit {
 
   public quotes: Quote[] = [
-    new Quote(1, "Alice Walker", "In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in weird ways, and they’re still beautiful. ", new Date(2020, 3, 8), 0, 0),
-    new Quote(2, "Helen Keller", "To me a lush carpet of pine needles or spongy grass is more welcome than the most luxurious Persian rug.", new Date(2020, 5, 3), 0, 0),
-    new Quote(3, "Native American proverb", " We don’t inherit the earth from our ancestors, we borrow it from our children.", new Date(2020, 11, 7), 0, 0),
-    new Quote(4, "Albert Einstein", " Look deep into nature, and then you will understand everything better.", new Date(2020, 16, 9), 0, 0),
+    new Quote(1, "Sharon KImani", "In nature, nothing is perfect and everything is perfect. Trees can be contorted, bent in weird ways, and they’re still beautiful. ","Alice Walker", new Date(2020, 3, 8), 0, 0),
+    new Quote(2, "Sharon KImani", "To me a lush carpet of pine needles or spongy grass is more welcome than the most luxurious Persian rug.", "Helen Keller", new Date(2020, 5, 3), 0, 0),
+    new Quote(3, "Sharon KImani", " We don’t inherit the earth from our ancestors, we borrow it from our children.","Native American proverb", new Date(2020, 11, 7), 0, 0),
+    new Quote(4, "Sharon KImani", " Look deep into nature, and then you will understand everything better.", "Albert Einstein", new Date(2020, 16, 9), 0, 0),
   ]
 
   addNewQuote(quote) {
