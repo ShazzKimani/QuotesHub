@@ -1,6 +1,16 @@
 # QuotesHub
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
+
+
+## Author
+By Sharon Kimani.
+
+## Description
+This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+
+
+## Live Link
+
 
 ## Development server
 
