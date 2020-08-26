@@ -1,15 +1,14 @@
 export class Quote {
-    showDescription:boolean;
+    showAuthor:boolean;
     constructor(
       public id: number,
       public name: string,
       public theQuote: string,
       public author: string,
-      public postDate:Date,
-      public numberOfLikes:number, 
-      public numberOfDislikes:number)
+      public postDate:Date)
+      
       {
-        this.showDescription=false;
+        this.showAuthor=false;
       }
       
     

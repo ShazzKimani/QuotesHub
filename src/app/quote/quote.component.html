@@ -1,38 +1,49 @@
 <div class="body">
-    <h1 class="text-center" id="sticky">Nature Quotes</h1>
-    <div class="container">
-  
-      <div class="row">
-        <div class="col-md-7">
-          <h2 class="text-center">Quotes</h2>
-          <p class="text-center">Nothing compares to nature‘s beauty, as these famous quotes about nature agree. From spring‘s hopeful new blooms and fall’s exquisite array of colors to winter’s magic and summer’s energy, 
-              each season abounds with different types of natural beauty to explore and admire.</p>
-          <div *ngFor='let quote of quotes; let i=index'>
-            <div id="quotes" class="mt-5">
-              <p appHighlight *ngIf="highestUpvote()===quote.numberOfLikes && quote.numberOfLikes>0">
-                {{quote.theQuote}}
-              </p>
-              <p *ngIf="highestUpvote()!==quote.numberOfLikes || quote.numberOfLikes===0">{{quote.theQuote}}
-              </p>
-  
-              <em>
-                <p>{{quote.author}}</p>
-              </em>
-              <div>
-                  <i class="fa fa-thumbs-up" aria-hidden="true" (click)="likeButtonClick(i)"></i>
-                  <i class="fa fa-thumbs-down ml-5" aria-hidden="true" (click)="dislikeButtonClick(i)"></i>
-                  <p><strong>Likes:</strong>{{quote.numberOfLikes}} <span><strong>Dislikes:</strong>{{quote.numberOfDislikes}}</span></p>
-                  </div>
-              
-              <button (click)='toggleDetails(i)' class="btn btn-success">Description</button>
-              <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='quoteDelete($event,i)'>
-              </app-quote-detail>
-            </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron">
+        <h1 class="display-3 text-center text-monospace">Nature Quotes</h1>
+
+        <hr class="my-2">
+        <div class="lead-1">
+        <p>Nothing compares to nature‘s beauty, as these famous quotes about nature agree. From
+          spring‘s hopeful new blooms and fall’s exquisite array of colors to winter’s magic and summer’s energy,
+          each season abounds with different types of natural beauty to explore and admire.</p>
+      </div>
+    </div>
+
+
+      <div class="col-md-7">
+        <h2 class="text-center">Quotes</h2>
+
+
+        <div *ngFor='let quote of quotes; let i=index'>
+          <div id="quotes" class="mt-5">
+            <ul>
+              <li>
+                <em>
+                  <p>{{quote.author}}</p>
+                </em>
+                <br>
+                <p>
+                  {{quote.theQuote}}
+                </p>
+                <p>Posted on {{quote.postDate|date}} <br> By {{quote.name}} <br>Posted {{quote.postDate | dateCount}}
+                  days ago</p>
+
+                <app-quote-detail *ngIf='quotes' [quote]='quotes' (isComplete)='quoteDelete($event,i)'>
+                </app-quote-detail>
+
+              </li>
+            </ul>
           </div>
+
         </div>
-        <div class="col-md-5" id="">
-          <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-        </div>
+
+      </div>
+      <div class="col-md-5">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
       </div>
     </div>
   </div>
+</div>
