@@ -6,11 +6,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 By Sharon Kimani.
 
 ## Description
-This is an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational.
+This is a web application made using Angular Frame Work, where users can write and publish quotes and have those quotes voted on whether they are terrible or are inspirational.
 
 
 ## Live Link
 
+https://shazzkimani.github.io/QuotesHub/
 
 ## Development server
 
